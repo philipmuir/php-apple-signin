@@ -7,6 +7,7 @@ use AppleSignIn\Http\Curl;
 use AppleSignIn\JWT;
 use AppleSignIn\PublicKeyFetcher;
 
+$audience = "example_apple_client_id_or_app_bundle";
 $clientUser = "example_client_user";
 $identityToken = "example_encoded_jwt";
 
@@ -28,6 +29,11 @@ $AppleUserUUID = $appleSignInPayload->getUserUUID();
  * Determine whether the client-provided user is valid.
  */
 $isValid = $appleSignInPayload->verifyUser($clientUser);
+
+/**
+ * Determine weather or not the JWT was intended for us. Other claims (time, issuer) and the signature are checked already.
+ */
+$isIntendedForMe = $appleSignInPayload->verifyAudience($audience);
 
 
 
