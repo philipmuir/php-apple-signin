@@ -23,7 +23,7 @@ class JWT extends \Firebase\JWT\JWT
         if (count($tks) !== 3) {
             throw new UnexpectedValueException('Wrong number of segments');
         }
-        [$headb64, $bodyb64, $cryptob64] = $tks;
+        list($headb64, $bodyb64, $cryptob64) = $tks;
         if (null === ($header = static::jsonDecode(static::urlsafeB64Decode($headb64)))) {
             throw new UnexpectedValueException('Invalid header encoding');
         }
