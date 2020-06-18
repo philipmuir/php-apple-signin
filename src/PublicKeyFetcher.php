@@ -12,7 +12,7 @@ use Firebase\JWT\JWK;
  */
 class PublicKeyFetcher
 {
-    private const PUBLIC_KEY_LIST_URL = 'https://appleid.apple.com/auth/keys';
+    const PUBLIC_KEY_LIST_URL = 'https://appleid.apple.com/auth/keys';
 
     /** @var Client */
     private $httpClient;

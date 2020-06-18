@@ -18,7 +18,7 @@ class Payload
      * @param object|null $instance
      * @throws Exception
      */
-    public function __construct(?object $instance)
+    public function __construct($instance)
     {
         if (is_null($instance)) {
             throw new Exception('Payload received null JWT.');

@@ -55,7 +55,7 @@ class Decoder
      * @return object
      * @throws Exception
      */
-    private function decodeIdentityToken(string $identityToken): object
+    private function decodeIdentityToken(string $identityToken)
     {
         $publicKeyKid = $this->JWT->getPublicKeyKid($identityToken);
 
