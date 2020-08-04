@@ -2,6 +2,8 @@ php-apple-signin
 =======
 PHP library to manage Sign In with Apple identifier tokens, and validate them server side passed through by the iOS client.
 
+[![Run on Repl.it](https://repl.it/badge/github/philipmuir/php-apple-signin)](https://repl.it/github/philipmuir/php-apple-signin)
+
 Installation
 ------------
 
